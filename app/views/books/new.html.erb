@@ -1,0 +1,24 @@
+<h1>Books#new</h1>
+
+<%= form_with model: @book do |f| %>
+  <div class="form-group">
+    <%= f.label :タグ %>
+    <%= f.text_field :category, class: "form-control book_category" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.select :prefecture, Book.areas.keys, {} %>
+  </div>
+
+  <div class="form-group">
+    <%= f.select :days, Book.stays.keys, {} %>
+  </div>
+
+  <div class="form-group">
+    <%= f.select :price, Book.costs.keys, {} %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit class: "btn btn-info" %>
+  </div>
+<% end %>

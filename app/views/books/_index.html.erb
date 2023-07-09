@@ -1,0 +1,7 @@
+<% books.each do |book| %>
+  <p>タグ：<%= book.category %></p>
+  <p>都道府県：<%= book.prefecture %></p>
+  <p>宿泊日数：<%= book.days %></p>
+  <p>価格帯：<%= book.price %></p>
+  <%= link_to "Destroy", book_path(book), method: :delete %>
+<% end %>

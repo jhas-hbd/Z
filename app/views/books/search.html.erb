@@ -1,0 +1,7 @@
+<h1>結果</h1>
+
+<% @books.each do |book| %>
+  <p>宿泊日数：<%= book.days %></p>
+  <p>価格帯：<%= book.price %></p>
+  <%= link_to "Destroy", book_path(book), method: :delete %>
+<% end %>
