@@ -21,5 +21,12 @@ class Book < ApplicationRecord
      "価格帯":0,
      "1万":1,"2万":2,"3万":3,"4万":4,"5万以上":5
    }
-end
 
+    scope :get_days, -> {
+      where("days like ?", "#{days}")
+    }
+    scope :get_price, -> {
+      where("price like ?", "#{price}")
+    }
+
+end

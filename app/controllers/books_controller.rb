@@ -22,12 +22,13 @@ class BooksController < ApplicationController
   def search
     days = params[:days]
     price = params[:price]
-    if (days != "") && (price != "")
-      @books = Book.where("books.days LIKE ? AND books.price LIKE ?", "#{days}", "#{price}")
-    elsif (days == "") || (price == "")
-      @books = Book.where("books.days LIKE ? or books.price LIKE ?", "#{days}", "#{price}")
-    else
-      @books = Book.all
+    if days.present?
+      @books = @books.get_days days
+      render 'books/search'
+    end
+    if price.present?
+      @books = @books.get_price price
+      render 'books/search'
     end
   end
 
