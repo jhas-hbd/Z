@@ -1,24 +1,17 @@
-# README
+# practice
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## sample
 
-Things you may want to cover:
 
-* Ruby version
+### sample1
+- text2
+- text2
 
-* System dependencies
 
-* Configuration
+### sample2
+- text3
 
-* Database creation
 
-* Database initialization
+## learn
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## study
